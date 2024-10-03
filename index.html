@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+
+  <body>
+    <div class="backgroud">
+      <div class="container">
+
+<!-- Card Visual -->
+
+          <div class="card-back">
+            <img class="card-back-image" src="/images/bg-card-back.png" alt="" />
+              <p class="card-cvc" data-card-cvc>000</p>
+          </div>
+          <div class="card-front">
+            <img
+              class="card-front-image"
+              src="/images/bg-card-front.png"
+              alt=""
+            />
+            <div class="card-front-content">
+              <img class="card-logo" src="/images/card-logo.svg" alt="" />
+              <p class="card-number" data-card-number>0000 0000 0000 0000</p>
+              <p class="cardholder-name" data-card-name>Jane Appleseed</p>
+              <div class="exp-date">
+                <span data-card-month>00</span>
+                <span>/</span>
+                <span data-card-year>00</span>
+              </div>
+            </div>
+          </div>
+          
+<!-- Card Input Form -->
+        <div class="form">
+
+          <label for="cardholderName">Cardholder Name </label>
+          <input
+            id="cardholderName"
+            type="text"
+            placeholder="e.g. J.cardane Appleseed "
+          />
+          <p class="invalid-message name-invalid">Can't be blank</p>
+
+          <label for="cardNumber">Card Number</label>
+          <input
+            id="cardNumber"
+            type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <p class="invalid-message card-number-invalid">Wrong format</p>
+          <p class="invalid-message card-number-empty">Can't be blank</p>
+
+          <div class="card-input-div">
+            <label class="label-date" for="date">Exp. Date (MM/YY)</label>
+            <input id="month" type="text" placeholder="MM" />
+            <input id="year" type="text" placeholder="YY" />
+            <p class="invalid-message date-invalid">Wrong format</p>
+            <p class="invalid-message date-blank">Can't be blank</p>
+
+            <label class="label-cvc" for="cvc">CVC</label>
+            <input id="cvc" type="text" placeholder="e.g. 123" />
+            <p class="invalid-message cvc-invalid">Wrong format</p>
+            <p class="invalid-message cvc-blank">Can't be blank</p>
+          </div>
+
+          <button>Confirm</button>
+        </div>
+      </div>
+    </div>
+
+<!-- Completed state start -->
+
+    <div class="complete-state">
+      <p>Thank you!</p>
+      <p>We've added your card details</p>
+      <button>Continue</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
